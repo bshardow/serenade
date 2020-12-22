@@ -1,13 +1,9 @@
 <footer class="css-6x8z6y">
     <div>
         "©" 
-        <!-- -->
         "2020"
-        <!-- --> 
         "by"
-        <!-- -->
         "Bashiru Shardow"
-        <!-- -->
         ". All rights reserved."
     </div>
     <div>
