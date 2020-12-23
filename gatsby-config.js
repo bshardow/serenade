@@ -46,9 +46,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `travel, work, and culture`,
+        short_name: `travel-blog`,
+        description: `Travel, work, culture and everything in between, the life and times of me`,
         start_url: `/`,
         background_color: `#F3EFE0`,
         theme_color: `#6B46C1`,
