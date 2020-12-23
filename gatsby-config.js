@@ -6,14 +6,14 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `Lupin`,
-    siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitle: `Bashiru`,
+    siteTitleAlt: `Bashiru - Culture, Identity, Travel, Work and everything in between`,
+    siteHeadline: `Bashiru - Culture, Identity, Travel, Work and everything in between`,
+    siteUrl: `https://bashiru.co`,
+    siteDescription: `A traveller's cultural commentary.`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@bssmoove`,
   },
   plugins: [
     {
@@ -52,9 +52,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `travel, work, and culture`,
-        short_name: `travel-blog`,
-        description: `Travel, work, culture and everything in between, the life and times of me`,
+        name: `Bashiru - Culture, Identity, Travel, Work and everything in between`,
+        short_name: `Bashiru`,
+        description: `Culture, Identity, Travel, Work and everything in between`,
         start_url: `/`,
         background_color: `#F3EFE0`,
         theme_color: `#6B46C1`,
