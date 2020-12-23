@@ -1,18 +1,45 @@
-<header class="css-1wt4r56">
-    <div class="css-190uhut">
-        <a aria-current="page" aria-label="Bashiru Shardow - Back to home" class="css-dz3ojy" href="/">
-            <div class="css-1kmktz0">Bashiru Shardow</div>
-        </a>
-        <button type="button" aria-label="Activate Dark Mode" title="Activate Dark Mode" class="css-af3ja4"><div class="css-iiu7h7"></div></button>
-        </div>
-        <div class="css-1kvspmd">
-            <nav class="css-nrb238">
-                <a class="css-688a3f" href="/blog">Blog</a>
-                <a class="css-688a3f" href="/about">About</a>
-            </nav>
-        <div class="css-e5k4e3">
-            <a href="https://twitter.com/bssmoove" class="css-688a3f">Twitter</a>
-            <a href="https://www.instagram.com/basssshiru/" class="css-688a3f">Instagram</a>
-        </div>
-    </div>
-</header>
+/** @jsx jsx */
+import { jsx, useColorMode } from "theme-ui"
+import { Flex } from "@theme-ui/components"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
+import ColorModeToggle from "./colormode-toggle"
+import Navigation from "./navigation"
+import HeaderTitle from "./header-title"
+import HeaderExternalLinks from "./header-external-links"
+
+const Header = () => {
+  const { navigation: nav } = useMinimalBlogConfig()
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+  const toggleColorMode = (e: any) => {
+    e.preventDefault()
+    setColorMode(isDark ? `light` : `dark`)
+  }
+
+  return (
+    <header sx={{ mb: [5, 6] }}>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+        <HeaderTitle />
+        <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
+      </Flex>
+      <div
+        sx={{
+          boxSizing: `border-box`,
+          display: `flex`,
+          variant: `dividers.bottom`,
+          alignItems: `center`,
+          justifyContent: `space-between`,
+          mt: 3,
+          color: `secondary`,
+          a: { color: `secondary`, ":hover": { color: `heading` } },
+          flexFlow: `wrap`,
+        }}
+      >
+        <Navigation nav={nav} />
+        <HeaderExternalLinks />
+      </div>
+    </header>
+  )
+}
+
+export default Header

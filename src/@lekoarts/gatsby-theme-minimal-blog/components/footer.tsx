@@ -1,12 +1,42 @@
-<footer class="css-6x8z6y">
-    <div>
-        "©" 
-        "2020"
-        "by"
-        "Bashiru Shardow"
-        ". All rights reserved."
-    </div>
-    <div>
-        <a aria-label="Link to the theme's GitHub repository" href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog" class="css-688a3f">Theme</a> by <a aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en" class="css-688a3f">LekoArts</a>
-    </div>
-</footer>
+/** @jsx jsx */
+import { jsx, Link } from "theme-ui"
+
+
+const Footer = () => {
+  
+
+  return (
+    <footer
+      sx={{
+        boxSizing: `border-box`,
+        display: `flex`,
+        justifyContent: `space-between`,
+        mt: [6],
+        color: `secondary`,
+        a: {
+          variant: `links.secondary`,
+        },
+        flexDirection: [`column`, `column`, `row`],
+        variant: `dividers.top`,
+      }}
+    >
+
+      <div>
+        <Link
+          aria-label="Link to the theme's GitHub repository"
+          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
+        >
+          Theme
+        </Link>
+        {` `}
+        by
+        {` `}
+        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+          LekoArts
+        </Link>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
